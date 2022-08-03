@@ -1,0 +1,14 @@
+.app {
+    display: flex;
+    background-color: bisque;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.sidebar {
+    width: 350px;
+    background-color: aquamarine;
+}

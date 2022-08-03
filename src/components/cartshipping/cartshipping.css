@@ -1,0 +1,14 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+}
