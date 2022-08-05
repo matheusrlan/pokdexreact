@@ -25,10 +25,10 @@ function SearchBar() {
         </div>  
 
         <div className="wrapper__item">
-            <div>
+            <div className='wrapper-img'>
                 <img src={infoPokemon[2]} alt={infoPokemon[0]} />
             </div>
-            <div>
+            <div className='wrapper-info'>
                 <h1>{infoPokemon[0]}</h1>
                 <h2>{infoPokemon[1]}</h2>
             </div>

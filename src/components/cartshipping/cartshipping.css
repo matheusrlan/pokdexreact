@@ -1,6 +1,16 @@
 .cart-container {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+}
+
+.cart-container h1 {
+    text-align: center;
+    color: black;
+}
+
+.cart-container p {
+    color: black;
 }
 
 .cart-item {
@@ -11,4 +21,18 @@
 .cart-total {
     display: flex;
     justify-content: space-between;
+}
+
+.compra-realizada {
+    display: flex;
+    margin-top: 50px;
+    height: 100px;
+    background-color: rgb(180, 184, 184);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.compra-realizada p {
+    width: 100%;
+    color: brown;
 }

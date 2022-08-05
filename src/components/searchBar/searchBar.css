@@ -34,3 +34,8 @@ height: 40px;
 color: white;
 padding: 10px 12px;
 }
+
+.wrapper__item {
+    display: flex;
+    margin-left: 5px;
+}

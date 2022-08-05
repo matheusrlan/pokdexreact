@@ -1,7 +1,7 @@
 import './cardPokemon.css'
 
 const CardPokemon = ({ pokemon, loading, handleBuy }) => {
-       console.log(pokemon);
+    //    console.log(pokemon);
     return (
         <div className='pokemon-grid'>
             {
@@ -27,7 +27,7 @@ const CardPokemon = ({ pokemon, loading, handleBuy }) => {
                                                     )
                                                 })}
                                             </div>
-                                            <div><button onClick={() => handleBuy(item.name, 10)}>comprar</button></div>
+                                            <div><button onClick={() => handleBuy(item.name, 10.00)}>comprar</button></div>
                                         </div>
                                     </div>
                                 </div>

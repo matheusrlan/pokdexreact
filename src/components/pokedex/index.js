@@ -7,7 +7,7 @@ import CardPokemon from "../cardPokemon/cardPokemon";
 import './pokedex.css'
 
 const Pokedex=({handleBuy})=>{
-
+    
     const [pokeData,setPokeData]=useState([]);
     const [loading,setLoading]=useState(true);
     const [url,setUrl]=useState("https://pokeapi.co/api/v2/pokemon/")
@@ -15,6 +15,8 @@ const Pokedex=({handleBuy})=>{
     const [prevUrl,setPrevUrl]=useState();
     const [pokeDex,setPokeDex]=useState();
 
+    // console.log("SetePOKEDATAAAAAA",pokeData)
+    
     const pokeAll=async()=>{
         setLoading(true)
         const res = await axios.get(url);
@@ -26,7 +28,6 @@ const Pokedex=({handleBuy})=>{
     }
     
     const getPokemon=async(res)=>{
-        let state
         res.map(async(item)=>{
             // console.log("ITEM", item.url)
             const result=await axios.get(item.url)
@@ -34,11 +35,13 @@ const Pokedex=({handleBuy})=>{
             setPokeData(state => {
                 state=[...state, result.data]
                 state.sort((a,b)=>a.id>b.id?1:-1)
+                // console.log("STATEEEETETTETTETS",state)
                 return state;
             })
         })   
-    }
+    }   
 
+    
     useEffect(()=>{
         pokeAll();
     },[url])
@@ -52,7 +55,7 @@ const Pokedex=({handleBuy})=>{
                     <div className="pagination-container">
                         {  prevUrl && <button onClick={()=>{
                             setPokeData([])
-                           setUrl(prevUrl) 
+                            setUrl(prevUrl) 
                         }}>Previous</button>}
 
                         { nextUrl && <button onClick={()=>{
